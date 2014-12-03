@@ -56,17 +56,7 @@
 				$('#selection-title').empty();
 				$('#selection-title').append(opcion).hide().delay(400).fadeIn();
 
-				var selection = $(this).text();
-				$.ajax({
-					url:"data/main-data/main-data.json",
-					type:"POST",
-					data:{selection: selection},
-					success:function(data){
-						$('#selection-title').empty();
-						$('#selection-title').append(data);
-					}
 
-				});
 
 			});
 		</script>
@@ -74,6 +64,28 @@
 	
 	<div id="main-content">
 		
+		<script type="text/javascript">
+			$(document).ready(function(){
+
+				$('#menu-container').find('nav').find('a').click(function(){
+					event.preventDefault();
+
+					var selection = $(this).text();
+					$.ajax({
+						url:"data/main-data/main-data.php",
+						type:"GET",
+						data:{selection: selection},
+						success:function(data){
+return(data);
+						}
+
+					});
+
+								});
+
+
+			});
+		</script>
 	</div>
 
 </div>
