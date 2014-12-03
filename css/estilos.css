@@ -195,6 +195,17 @@ a{
 }
 
 
+#main-content{
+	width: 46%;
+	height: 140px;
+	background-color: rgba(0,0,0,0.2);
+	position: relative;
+	left: 5%;
+	top: -50px;
+	padding: 2% 5px;
+	display: none;
+	color: white;
+}
 
 
 
