@@ -55,6 +55,19 @@
 				var opcion= $(this).text();
 				$('#selection-title').empty();
 				$('#selection-title').append(opcion).hide().delay(400).fadeIn();
+
+				var selection = $(this).text();
+				$.ajax({
+					url:"data/main-data/main-data.json",
+					type:"POST",
+					data:{selection: selection},
+					success:function(data){
+						$('#selection-title').empty();
+						$('#selection-title').append(data);
+					}
+
+				});
+
 			});
 		</script>
 	</h2>
