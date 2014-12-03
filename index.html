@@ -26,9 +26,11 @@
 
 			<script type="text/javascript">
 				$('#menu-container').find('nav').find('a').click(function(){
-					$(this).fadeOut();
+					
+					$(this).hide();
 					var option= $(this).text();
-					$(".click-a").not(document.getElementById(option)).delay(700).fadeIn('slow');
+
+					$(".click-a").not(document.getElementById(option)).delay(700).show();
 					
 					
 				});
@@ -50,8 +52,8 @@
 		<script type="text/javascript">
 			$('#menu-container').find('nav').find('a').click(function(){
 				var opcion= $(this).text();
-				$('h2').empty();
-				$('h2').append(opcion).hide().delay(400).fadeIn();
+				$('#selection-title').empty();
+				$('#selection-title').append(opcion).hide().delay(400).fadeIn();
 			});
 		</script>
 	</h2>
