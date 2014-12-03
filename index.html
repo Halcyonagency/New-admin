@@ -1,1 +1,45 @@
-<div>hola</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>HOME || Halcyon Design</title>
+	<link rel="stylesheet" href="estilos.css">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.js"></script>
+	<link rel="stylesheet" href="animate.css">
+</head>
+<body>
+
+	<div id="menu-container">
+		<a id="menu-a" href="#">
+			<figure>
+				<img src="http://placehold.it/350x150" alt="Logo Halcyon">
+			</figure>
+		</a>
+		<nav>
+			<a href="#" id="NOSOTROS" class="click-a">NOSOTROS</a>
+			<a href="#" id="PORTFOLIO" class="click-a">PORTFOLIO</a>
+			<a href="#" id="BLOG" class="click-a">BLOG</a>
+			<a href="#" id="CONTACTO" class="click-a">CONTACTO</a>
+			<script type="text/javascript">
+				$('#menu-container').find('nav').find('a').click(function(){
+					$(this).fadeOut();
+					var option= $(this).text();
+					$(".click-a").not(document.getElementById(option)).delay(700).fadeIn('slow');
+					
+					
+				});
+			</script>
+		</nav>
+	</div>
+	
+	<h2>
+		<script type="text/javascript">
+			$('#menu-container').find('nav').find('a').click(function(){
+				var opcion= $(this).text();
+				$('h2').empty();
+				$('h2').append(opcion).hide().delay(400).fadeIn();
+			});
+		</script>
+	</h2>
+</body>
+</html>
