@@ -93,14 +93,48 @@ a{
 	margin-left: 40px;
 	font-size: 1.5em;
 	opacity: 0;
-	-webkit-animation: fadeIn 0.7s ease-out;
+	display: inline-block;
+
+/*	-webkit-animation: fadeIn 0.7s ease-out;
     animation: fadeIn 0.7s ease-out;
 	  animation-delay: 2.4s;
     -webkit-animation-delay: 2.4s;
     animation-fill-mode: forwards;
-    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;*/
+  animation-delay: 2.2s;
+    -webkit-animation-delay: 2.2s;
+  
   
 }
+
+
+
+
+#menu-container nav a:nth-child(1){
+	opacity: 0;
+    animation-delay: 2.3s;
+    -webkit-animation-delay: 2.3s;
+}
+
+
+#menu-container nav a:nth-child(2){
+	opacity: 0;
+    animation-delay: 2.6s;
+    -webkit-animation-delay: 2.6s;
+}
+
+#menu-container nav a:nth-child(3){
+	opacity: 0;
+    animation-delay: 2.9s;
+    -webkit-animation-delay: 2.9s;
+}
+
+#menu-container nav a:nth-child(4){
+	opacity: 0;
+    animation-delay: 3.2s;
+    -webkit-animation-delay: 3.2s;
+}
+
 
 #selection-title{
 	margin-left: 5%;
@@ -122,24 +156,33 @@ a{
 #slogan h1{
 	font-size: 3em;
 	opacity: 0;
-	-webkit-animation: fadeIn 0.8s ease-out;
+	/*-webkit-animation: fadeIn 0.8s ease-out;
     animation: fadeIn 0.8s ease-out;
 	animation-delay: 3.3s;
     -webkit-animation-delay: 3.3s;
     animation-fill-mode: forwards;
-    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;*/
+    animation-delay: 3.6s;
+    -webkit-animation-delay: 3.6s;
+  
 
 }
 
 #slogan h2{
 	margin-top: 7%;
 	opacity: 0;
-	-webkit-animation: fadeIn 0.7s ease-out;
+
+	/*-webkit-animation: fadeIn 0.7s ease-out;
     animation: fadeIn 0.7s ease-out;
 	animation-delay: 4s;
     -webkit-animation-delay: 4s;
     animation-fill-mode: forwards;
-    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;*/
+	
+		animation-delay: 4.2s;
+    -webkit-animation-delay: 4.2s;
+
+
 }
 
 
@@ -166,14 +209,22 @@ a{
 
 
 @-webkit-keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
+    from {opacity: 0;
+      - -webkit-transform: translate3d(0, -2000px, 0);
+            transform: translate3d(0, -2000px, 0);}
+    to {opacity: 1;
+        -webkit-transform: none;
+            transform: none;}
 } 
 
 
 @keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
+    from {opacity: 0;
+      -webkit-transform: translate3d(0, -2000px, 0);
+            transform: translate3d(0, -2000px, 0);}
+    to {opacity: 1;
+      -webkit-transform: none;
+            transform: none;}
 }
 
 
