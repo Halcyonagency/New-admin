@@ -19,8 +19,8 @@ body{
 	font-family: basicTitle;
 	height: 100%;
 
-		-webkit-animation: strechBack 3.5s ease;
-    animation: strechBack 3.5s ease;
+		-webkit-animation: strechBack 2.5s ease-in;
+    animation: strechBack 2.5s ease-in;
 	animation-delay: 0s;
     -webkit-animation-delay: 0s;
     animation-fill-mode: forwards;
