@@ -18,6 +18,14 @@ body{
 	background-position: 50% 0px;
 	font-family: basicTitle;
 	height: 100%;
+
+		-webkit-animation: strechBack 3.5s ease;
+    animation: strechBack 3.5s ease;
+	animation-delay: 0s;
+    -webkit-animation-delay: 0s;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+
 }
 
 
@@ -166,4 +174,18 @@ a{
 @keyframes fadeIn {
     from {opacity: 0;}
     to {opacity: 1;}
+}
+
+
+@-webkit-keyframes strechBack {
+    from {	background-size: 150% auto;
+}
+    to {background-size: 170% auto}
+} 
+
+
+@keyframes strechBack {
+    from {	background-size: 150% auto;
+}
+    to {background-size: 170% auto}
 }
