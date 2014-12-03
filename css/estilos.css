@@ -14,7 +14,7 @@ body{
 	font-size: 100%;
 	background: url('../img/fondo2.jpg');
 	background-repeat: no-repeat;
-	background-size: 150% auto;
+	background-size: 130% auto;
 	background-position: 50% 0px;
 	font-family: basicTitle;
 	height: 100%;
@@ -140,7 +140,12 @@ a{
 	margin-left: 5%;
 	margin-top: 2%;
 	font-weight: bold;
-	font-size: 2em;
+	font-size: 2.3em;
+	position: absolute;
+	top: 90px;
+	left: -0%;
+	text-shadow: 1px 1px 10px rgba(255,2552,255,0.8);
+	color: rgba(0,0,0,0.8);
 
 }
 
@@ -151,6 +156,8 @@ a{
 	text-align: center;
 	top: 35%;
 	color: rgba(0,0,0,0.7);
+	transition:all 1s ease;
+	-webkit-transition:all 1s ease;
 }
 
 #slogan h1{
@@ -162,6 +169,7 @@ a{
     -webkit-animation-delay: 3.3s;
     animation-fill-mode: forwards;
     -webkit-animation-fill-mode: forwards;*/
+    
     animation-delay: 3.6s;
     -webkit-animation-delay: 3.6s;
   
@@ -229,14 +237,14 @@ a{
 
 
 @-webkit-keyframes strechBack {
-    from {	background-size: 150% auto;
+    from {	background-size: 130% auto;
 }
-    to {background-size: 170% auto}
+    to {background-size: 138% auto}
 } 
 
 
 @keyframes strechBack {
-    from {	background-size: 150% auto;
+    from {	background-size: 130% auto;
 }
-    to {background-size: 170% auto}
+    to {background-size: 138% auto}
 }

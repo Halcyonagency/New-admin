@@ -19,12 +19,12 @@
 			</figure>
 		</a>
 		<nav>
-			<a href="#" id="NOSOTROS" class="animated fadeInLeft">NOSOTROS</a>
-			<a href="#" id="PORTFOLIO" class=" animated fadeInLeft">PORTFOLIO</a>
-			<a href="#" id="BLOG" class="animated fadeInLeft">BLOG</a>
-			<a href="#" id="CONTACTO" class="animated fadeInLeft">CONTACTO</a>
+			<a href="#" id="NOSOTROS" class="click-a animated fadeInLeft">NOSOTROS</a>
+			<a href="#" id="PORTFOLIO" class="click-a animated fadeInLeft">PORTFOLIO</a>
+			<a href="#" id="BLOG" class=" click-a animated fadeInLeft">BLOG</a>
+			<a href="#" id="CONTACTO" class="click-a animated fadeInLeft">CONTACTO</a>
 
-			<!--<script type="text/javascript">
+			<script type="text/javascript">
 				$('#menu-container').find('nav').find('a').click(function(){
 					$(this).fadeOut();
 					var option= $(this).text();
@@ -32,7 +32,7 @@
 					
 					
 				});
-			</script>-->
+			</script>
 		</nav>
 		
 		
@@ -40,6 +40,11 @@
 	<div id="slogan">
 		<h1 class="animated fadeInDown" >Halcyon Agency</h1>
 		<h2 class="animated fadeInDown">Making our own ways</h2>
+		<script type="text/javascript">
+			$('#menu-container').find('nav').find('a').click(function(){
+				$('#slogan').css('opacity', 0.8);
+			});
+		</script>
 	</div>
 	<h2 id="selection-title" class="">
 		<script type="text/javascript">
