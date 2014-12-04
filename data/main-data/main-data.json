@@ -1,5 +1,9 @@
 {
-	"opciones":{
-		"nosotros": "test"
-	}
+
+	var opciones=[
+
+		NOSOTROS:"test"
+
+	
+
 }

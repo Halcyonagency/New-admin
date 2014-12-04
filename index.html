@@ -70,17 +70,17 @@
 				$('#menu-container').find('nav').find('a').click(function(){
 					
 
-					var selection=$(this).text();
+					var selections=$(this).text();
 
 					$.ajax({
-						url:"main-data.php",
+						url:"data/main-data/main-data.json",
 						type:"GET",
-						data:{selection: selection},
+						data:{selection: selections},
 						success:function(data){
-						$('#main-content').append(data);
+						 console.log("hola");
 						}
 
-					});;
+					});
 
 				});
 
