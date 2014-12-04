@@ -70,18 +70,19 @@
 				$('#menu-container').find('nav').find('a').click(function(){
 					event.preventDefault();
 
-					var selection = $(this).text();
+					var selection=$(this).text();
+
 					$.ajax({
-						url:"data/main-data/main-data.php",
+						url:"main-data.php",
 						type:"GET",
 						data:{selection: selection},
 						success:function(data){
-return(data);
+						$('#main-content').append(data);
 						}
 
-					});
+					});;
 
-								});
+				});
 
 
 			});
