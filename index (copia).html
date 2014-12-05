@@ -103,81 +103,60 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
 		<meta name="viewport" content="width=device-width, initial-scale=1"> 
-		<title>HOME || Halcyon Agency</title>
+		<title>Inspiration for Article Intro Effects | Demo 1</title>
+		<meta name="description" content="Inspiration for Article Intro Effects" />
+		<meta name="keywords" content="title, header, effect, scroll, inspiration, medium, web design" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico">
 		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
-		<link rel="stylesheet" type="text/css" href="css/styles.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
 		<link rel="stylesheet" type="text/css" href="css/component.css" />
-		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.js"></script>
-		<link rel="stylesheet" href="css/animate.css">
 		<!--[if IE]>
   		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
-
-		
+		<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-7243260-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
 	</head>
-	<body>
+	<body class="demo-1">
 		<div id="container" class="container intro-effect-push">
 			<!-- Top Navigation -->
-			<div class="top-logo">
-				<a href="#">LOGO</a>
+			<div class="codrops-top clearfix">
+				<a class="codrops-icon codrops-icon-prev" href="http://tympanus.net/Tutorials/SamsungGrid/"><span>Dejanos un comentario!</span></a>
+				<span class="right">
 			</div>
-			<div class="top-navigation clearfix">
-				<a class="sub-nav-icon" href="#"><span>Dejanos un comentario!</span></a>
-				<script type="text/javascript">
-
-					$('.sub-nav-icon').find('span').mouseenter(function(){
-    			$(this).addClass("animated");
-						$(this).addClass("bounceInLeft");
-					}).mouseleave(function(){
-    			$(this).removeClass("animated");
-						$(this).removeClass("bounceInLeft");
-					});
-
-				</script>
-
-
-
-			</div>
-
-			
-
 			<header class="header">
-				
-				<nav class="menu-bar top cl-effect-18" id="menu-up">
-						<a id="test" href="#">Nosotros</a>
-						<a href="#">Portfolio</a>
-						<a href="#">Blog</a>
-						<a href="#">Contacto</a>
-				</nav>
-
-
-				<script type="text/javascript">
-
-				var btn=document.getElementByClass("menu-bar");
-btn.on('click', function(event) {
-    event.preventDefault();
-    
-});
-			</script>
-
-
-				<div class="title" id="title">
-					
-					<h1 id="h1-title">Halcyon Agency</h1>
+				<div class="bg-img"><img src="img/7.jpg" alt="Background Image"/></div>
+				<div class="title">
+					<nav class="codrops-demos">
+						<a href="index2.html">Nosotros</a>
+						<a href="index3.html">Portfolio</a>
+						<a href="index4.html">Blog</a>
+						<a href="index5.html">Contacto</a>
+						
+					</nav>
+					<h1>Halcyon Agency</h1>
 					<h2 id="h2-title">Thinking our own ways</h2>
 				</div>
 			</header>
-			<nav class="menu-bar down cl-effect-18" id="menu-down">
+			
+			<div class="title">
+				<nav class="codrops-demos">
 						
-						<a href="#">Nosotros</a>
-						<a href="#">Portfolio</a>
-						<a href="#">Blog</a>
-						<a href="#">Contacto</a>
+						<a href="index3.html">Nosotros</a>
+						<a href="index4.html">Portfolio</a>
+						<a href="index5.html">Blog</a>
+						<a href="index6.html">Contacto</a>
 						
-			</nav>
-			<div class="title ">
-				
-				<h1 id="h1-second-title">Un poco sobre nuestra historia</h1>
+					</nav>
+				<h1>Un poco sobre nuestra historia</h1>
 				<p class="subline">Inspiración de una tarde</p>
 				<p>by <strong>Horacio/Brian</strong> &#8212; <strong>Halcyon, el otro lado</strong> el <strong>May 21, 2014</strong></p>
 			</div>
@@ -193,8 +172,8 @@ btn.on('click', function(event) {
 			</article>
 			<section class="related">
 				<p>Y si te copó algo de lo que viste, capaz te interese: </p>
-				<div><a href="#"><h4>Workflow de laburo</h4></a></div>
-				<div><a href="#"><h4>Primera plantilla</h4></a></div>
+				<div><a href="http://tympanus.net/Development/HeaderEffects/"><h4>Workflow de laburo</h4></a></div>
+				<div><a href="http://tympanus.net/Tutorials/MediumStylePageTransition/"><h4>Primera plantilla</h4></a></div>
 			</section>
 		</div><!-- /container -->
 		<script src="js/classie.js"></script>
@@ -338,81 +317,9 @@ btn.on('click', function(event) {
 				
 				window.addEventListener( 'scroll', scrollPage );
 				trigger.addEventListener( 'click', function() { toggle( 'reveal' ); } );
-				window.addEventListener( 'scroll', scrollPage );
 			})();
 		</script>
-		
-<script type="text/javascript">
-
-			$('.menu-bar').find('a').click(function(event){
-				$('.title').fadeOut();
-				$('.top-navigation').fadeOut();
-				var opcion = $(this).text();
-
-				
-
-				$('.main-content').fadeOut();
-						
-				
-
-
-
-
-				$.ajax({
-					url:"data/main-data/main-data.php",
-					type:"POST",
-					dataType: 'json',
-            cache: false,
-					data:{selection:opcion},
-					success:function(result){
-					
-					$('header').delay(800).append("<div class='main-content'>"+"<h1>"+opcion+"</h1>"+"</div>");
-
-					$('header').find(".main-content").append("<h2>"+result+"</h2>");
-
-						
-					}
-
-
-
-			
-
-
-
-
-				});
-
-
-
-				$.ajax({
-					url:"data/main-data/main-data-"+opcion+".php",
-					type:"POST",
-					dataType: 'json',
-            cache: false,
-					data:{selection:opcion},
-					success:function(result){
-
-					$('.main-content').append("<p>"+result+"</p>");
-
-					
-
-						
-					}
-
-
-
-
-				});
-
-			});
-
-			
-			
-
-
-
-
-			</script>
-
+		<!-- For the demo ad only -->   
+<script src="js/demoad.js"></script>
 	</body>
 </html>
