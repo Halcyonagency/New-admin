@@ -426,7 +426,7 @@ html {
     -webkit-text-size-adjust:none
 }
 body {
-    background:#00191d;
+    background:#43434b;
     color:rgba(0,0,0,0.8);
     font-family:"Proxima N W02 Reg",
     Helvetica,
@@ -539,7 +539,7 @@ h1 {
     font-size:30px;
     position: relative;
     top: 10px;
-    left: -120px;
+    left: 0px;
 }
 h2 {
     font-size:20px;
@@ -574,11 +574,16 @@ legend {
     line-height:140%
 }
 h2 {
-    font-size:6em;
+    font-size:2.5em;
     line-height:82px;
     margin-bottom:20px;
     letter-spacing:5px;
     color:rgba(0,0,0,0.7);
+}
+
+.big-title{
+    font-size: 5em;
+    
 }
 p {
     font-size:14px;
@@ -5933,8 +5938,13 @@ span.hint.dark .arrow {
         0.8)
     }
     header h1 {
-        left:15px;
-        height:57px
+        left:0px;
+        height: auto;
+        width: 100%;
+
+        position: relative;
+        top: 0px;
+
     }
     header h1 span.dficons-slate,
     header h1 span.dficons-df-typo {
@@ -11206,3 +11216,8 @@ span.hint.dark .arrow {
         font-size:16px
     }
 }
+
+a:visited, a{
+    color: rgba(0,0,0,0.8);
+};
+
