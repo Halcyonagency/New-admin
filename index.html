@@ -105,10 +105,13 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1"> 
 		<title>HOME || Halcyon Agency</title>
 		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+			<link rel="stylesheet" href="css/tooltip.css">
 		<link rel="stylesheet" type="text/css" href="css/styles.css" />
 		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<link rel="stylesheet" type="text/css" href="css/tooltip.css" />
 		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.js"></script>
 		<link rel="stylesheet" href="css/animate.css">
+
 		<!--[if IE]>
   		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
@@ -119,10 +122,10 @@
 		<div id="container" class="container intro-effect-push">
 			<!-- Top Navigation -->
 			<div class="top-logo">
-				<a href="#">LOGO</a>
+				<a href="index.php"></a>
 			</div>
 			<div class="top-navigation clearfix">
-				<a class="sub-nav-icon" href="#"><span>Dejanos un comentario!</span></a>
+				<a class="sub-nav-icon animated fadeInRight" href="#"><span>Dejanos un comentario!</span></a>
 				<script type="text/javascript">
 
 					$('.sub-nav-icon').find('span').mouseenter(function(){
@@ -144,10 +147,10 @@
 			<header class="header">
 				
 				<nav class="menu-bar top cl-effect-18" id="menu-up">
-						<a id="test" href="#">Nosotros</a>
-						<a href="#">Portfolio</a>
-						<a href="#">Blog</a>
-						<a href="#">Contacto</a>
+						<a class="animated fadeInLeft" id="test" href="#">Nosotros</a>
+						<a class="animated fadeInLeft" href="#">Portfolio</a>
+						<a class="animated fadeInLeft" href="#">Blog</a>
+						<a class="animated fadeInLeft" href="#">Contacto</a>
 				</nav>
 
 
@@ -163,16 +166,16 @@ btn.on('click', function(event) {
 
 				<div class="title" id="title">
 					
-					<h1 id="h1-title">Halcyon Agency</h1>
-					<h2 id="h2-title">Thinking our own ways</h2>
+					<h1 id="h1-title" class="animated fadeInDown">Halcyon Agency</h1>
+					<h2 id="h2-title" class="animated fadeInDown">Thinking our own ways</h2>
 				</div>
 			</header>
 			<nav class="menu-bar down cl-effect-18" id="menu-down">
 						
-						<a href="#">Nosotros</a>
-						<a href="#">Portfolio</a>
-						<a href="#">Blog</a>
-						<a href="#">Contacto</a>
+						<a class="animated fadeInLeft" href="#">Nosotros</a>
+						<a class="animated fadeInLeft" href="#">Portfolio</a>
+						<a class="animated fadeInLeft" href="#">Blog</a>
+						<a class="animated fadeInLeft" href="#">Contacto</a>
 						
 			</nav>
 			<div class="title ">
@@ -345,7 +348,8 @@ btn.on('click', function(event) {
 <script type="text/javascript">
 
 			$('.menu-bar').find('a').click(function(event){
-				$('.title').fadeOut();
+				$('#h1-title').fadeOut();
+				$('#h2-title').fadeOut();
 				$('.top-navigation').fadeOut();
 				var opcion = $(this).text();
 
@@ -366,9 +370,9 @@ btn.on('click', function(event) {
 					data:{selection:opcion},
 					success:function(result){
 					
-					$('header').delay(800).append("<div class='main-content'>"+"<h1>"+opcion+"</h1>"+"</div>");
+					$('header').delay(800).append("<div class='main-content animated fadeInLeft '>"+"<h1>"+opcion+"</h1>"+"</div>");
 
-					$('header').find(".main-content").append("<h2>"+result+"</h2>");
+					$('header').find(".main-content").append("<h2 class='animated fadeInLeft big-title'>"+result+"</h2>");
 
 						
 					}
@@ -392,7 +396,7 @@ btn.on('click', function(event) {
 					data:{selection:opcion},
 					success:function(result){
 
-					$('.main-content').append("<p>"+result+"</p>");
+					$('.main-content').append(result);
 
 					
 

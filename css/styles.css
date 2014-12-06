@@ -52,7 +52,6 @@ a:hover, a:focus {
 	width: 94%;
 	left: 3%;
 	
-	
 }
 
 .top-logo a{
@@ -61,9 +60,76 @@ a:hover, a:focus {
 	line-height: 1.5;
 	display: block;
 	width: 100px;
-	height: 100px;
+	height: 75px;
+	position: relative;
+	top: -5px;
+	left: -8px;
+	background: url('../img/logo.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+
 
 }
+
+
+#main-data{
+	width: 700px;
+	height: 700px;
+}
+
+#main-data article{
+	width: 42%;
+	display: inline-block;
+	margin-left: 4%;
+}
+
+#main-data article p{
+	word-wrap: break-word;
+	width: 99%;
+	font-size: 0.75em;
+	font-weight:bold;
+	margin-top: 45px;
+	padding-left: 2%;
+	padding-right: 2%;
+	text-align: center;
+}
+
+#main-data article h3{
+width: 99%;
+text-align:center;
+border-bottom: rgba(0,0,0,0.6) dashed 1px;
+padding-bottom: 5px;
+}
+
+.circle{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	position: relative;
+	margin: auto;
+
+}
+
+
+
+#main-data object{
+	position: absolute;
+	top: 140px;
+	right: 10px;
+}
+
+#main-data article:nth-child(2) .circle{
+	background: url('../img/selfie2.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+#main-data article:nth-child(3) .circle{
+	background: url('../img/selfie.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
 
 
 .top-navigation {
@@ -103,6 +169,7 @@ a:hover, a:focus {
 	speak: none;
 	margin: 0 0.55em 0 0;
 	-webkit-font-smoothing: antialiased;
+
 }
 
 
@@ -115,8 +182,9 @@ a:hover, a:focus {
 	line-height: 1.5;
 	transform:translateY(20px);
 	left: -3%;
-z-index: 15510;
-	
+	z-index: 15510;
+ 	
+
 
 }
 
@@ -185,19 +253,26 @@ z-index: 15510;
 	position: relative;
 	top: -20px;
 	left: 0px;
+	animation-delay:1s;
+	-webkit-animation-delay:1s;
 }
 
 .main-content h2{
 	position: relative;
-	top: -60px;
+	top: -53px;
 	left:-5px;
+	margin-top: 25px;
+	animation-delay:0.5s;
+	-webkit-animation-delay:0.5s;
 }
 
 .main-content p{
 	position: relative;
-	top: -50px;
-	width: 500px;
+	top: -20px;
+	width: 700px;
 }
+
+
 
 
 @media screen and (max-width: 40em) {
@@ -207,4 +282,16 @@ z-index: 15510;
 		font-size: 80%;
 	}
 
+}
+
+
+#h1-title{
+	animation-delay:2.5s;
+	-webkit-animation-delay:2.5s;
+}
+
+
+#h2-title{
+	animation-delay:2.9s;
+	-webkit-animation-delay:2.9s;
 }

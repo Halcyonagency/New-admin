@@ -6,7 +6,7 @@ $selection=$_POST["selection"];
 
 if (isset($selection)) {
 
-$textos = array('Nosotros' => "Breve reseña historica...","Portfolio"=>"Mirá los últimos trabajos:", "Blog"=>"Dejanos tu opinión y leé la nuestra", "Contacto"=>"Contactanos!" );
+$textos = array('Nosotros' => "Breve reseña historica...","Portfolio"=>"Últimos trabajos:", "Blog"=>"Dejanos tu opinión", "Contacto"=>"Contactanos!" );
 	
 
 	
