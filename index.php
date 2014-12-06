@@ -109,6 +109,7 @@
 		<link rel="stylesheet" type="text/css" href="css/component.css" />
 		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.js"></script>
 		<link rel="stylesheet" href="css/animate.css">
+
 		<!--[if IE]>
   		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
@@ -414,6 +415,5 @@ btn.on('click', function(event) {
 
 
 			</script>
-
 	</body>
 </html>
