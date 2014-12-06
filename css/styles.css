@@ -349,12 +349,12 @@ border-radius: 5px;
 
 
 
-.fullscreenForm li:nth-child(1){
+.fullscreenForm li:nth-child(2){
 	opacity: 0;
 }
 
 
-.fullscreenForm li:nth-child(2){
+.fullscreenForm li:nth-child(3){
 	opacity: 0;
 }
 
