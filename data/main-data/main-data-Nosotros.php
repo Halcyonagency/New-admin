@@ -20,8 +20,9 @@ $texto = "
 		<h3>Horacio Gutierrez</h3>
 		<p>Lorem ipsum dolor sit amet, , totam enim nostrum magni qui voluptate quidem culpa error pariatur, autem dolor.</p>
 	</article>
-<object width='550' height='355'
-data='http://www.youtube.com/embed/ow7nbanxSkI'>
+<!--<object width='550' height='355'
+data='http://www.youtube.com/embed/ow7nbanxSkI'>-->
+
 </object>
 
 

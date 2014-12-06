@@ -109,7 +109,20 @@
 		<link rel="stylesheet" type="text/css" href="css/component.css" />
 		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.js"></script>
 		<link rel="stylesheet" href="css/animate.css">
-		<link rel="stylesheet" href="css/tooltip.css">
+<<<<<<< HEAD
+=======
+		<link rel="stylesheet" type="text/css" href="css/tooltip.css" />
+
+
+
+		
+			<link rel="stylesheet" type="text/css" href="FullscreenForm/css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="FullscreenForm/css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="FullscreenForm/css/component.css" />
+		<link rel="stylesheet" type="text/css" href="FullscreenForm/css/cs-select.css" />
+		<link rel="stylesheet" type="text/css" href="FullscreenForm/css/cs-skin-boxes.css" />
+		<script src="FullscreenForm/js/modernizr.custom.js"></script>
+>>>>>>> f-portfolio
 		<!--[if IE]>
   		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
@@ -117,10 +130,29 @@
 		<link rel="stylesheet" type="text/css" href="css/layout.min.css" media="all" />
 	</head>
 	<body>
+		<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '124413210996708',
+      xfbml      : true,
+      version    : 'v2.2'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
 		<div id="container" class="container intro-effect-push">
 			<!-- Top Navigation -->
+			<!--hola-->
 			<div class="top-logo">
-				<a href="index.php"></a>
+				<a href="index.html"></a>
 			</div>
 			<div class="top-navigation clearfix">
 				<a class="sub-nav-icon animated fadeInRight" href="#"><span>Dejanos un comentario!</span></a>
@@ -190,6 +222,12 @@ btn.on('click', function(event) {
 					<p>Pero cuando trabajamos, trabajamos con todo. Le ponemos nuestra mano a cada uno de nuestros proyectos para  destacarnos en usar diseños únicos.</p>
 					<p>Le decimos NO! a las plantillas compradas; aca en Halcyon te aseguramos un diseño único y de calidad.</p>
 					<p>Y si te copó, te venis y nos traes una birra de regalo."</p>
+					<div
+  class="fb-like"
+  data-share="true"
+  data-width="450"
+  data-show-faces="true">
+</div>
 				</div>
 			</article>
 			<section class="related">
@@ -354,7 +392,7 @@ btn.on('click', function(event) {
 				
 
 				$('.main-content').fadeOut();
-						
+				$('.fullscreenForm').fadeOut();
 				
 
 
@@ -393,11 +431,11 @@ btn.on('click', function(event) {
             cache: false,
 					data:{selection:opcion},
 					success:function(result){
-
-					$('.main-content').append(result);
-
+						if (opcion=="Contacto") {$('header').prepend(result);} else{$('.main-content').append(result)};
 					
 
+					
+					
 						
 					}
 
@@ -415,5 +453,6 @@ btn.on('click', function(event) {
 
 
 			</script>
+<script src="js/fullscreenForm.js"></script>
 	</body>
 </html>
