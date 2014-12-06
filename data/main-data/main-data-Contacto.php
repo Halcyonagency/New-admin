@@ -1,6 +1,6 @@
 <?php 
 
-$selection=$_POST["selection"];
+$selection=$_POST['selection'];
 
 
 
@@ -35,7 +35,7 @@ $texto = "
 								<option value='#b0c47f' data-class='color-b0c47f'>#b0c47f</option>
 								<option value='#f3e395' data-class='color-f3e395'>#f3e395</option>
 								<option value='#f3ae73' data-class='color-f3ae73'>#f3ae73</option>
-								<option value=#da645a' data-class='color-da645a'>#da645a</option>
+								<option value='#da645a' data-class='color-da645a'>#da645a</option>
 								<option value='#79a38f' data-class='color-79a38f'>#79a38f</option>
 								<option value='#c1d099' data-class='color-c1d099'>#c1d099</option>
 								<option value='#f5eaaa' data-class='color-f5eaaa'>#f5eaaa</option>
@@ -65,7 +65,8 @@ $texto = "
 					<button class='fs-submit' type='submit'>Send answers</button>
 				</form>
 
-";
+"
+				;
 	
 
 	
