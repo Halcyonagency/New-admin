@@ -183,12 +183,14 @@ z-index: 15510;
 
 .main-content h1{
 	position: relative;
-	top: -30px;
+	top: -20px;
+	left: 0px;
 }
 
 .main-content h2{
 	position: relative;
 	top: -60px;
+	left:-5px;
 }
 
 .main-content p{
