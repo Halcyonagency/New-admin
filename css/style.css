@@ -1,4 +1,7 @@
-@import url('../fonts/basictitlefont.ttf');
+@font-face {
+    font-family: BasicTitle;
+    src: url('../font/basictitlefont.ttf');
+}
 
 *{
 	margin:0;
@@ -11,7 +14,7 @@ html, body, .container{
 body{
 	font-size: 100%;
 	line-height: 1.5;
-	font-family: 'basictitle', Arial, sans-serif;
+	font-family: 'BasicTitle', Arial, sans-serif;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	overflow-x: hidden;
@@ -52,25 +55,36 @@ header{
 	width: 96%;
 	height: 90px;
 	margin: auto;
-	border-bottom: #ccc solid 1px;
+	border-bottom: #999 solid 1px;
+	animation: strech 0.6s linear;
+	-webkit-animation: strech 0.6s linear;
 }
 
 .top-logo{
 	width: 110px;
 	height: 90px;
-	background:url('../img/logo.png');
-	background-size: 110px 90px;
+	
 	display: inline-block;
 }
+
+.top-logo a {
+	width: 110px;
+	height: 90px;
+	display: block;
+	opacity: 0;
+	background:url('../img/logo.png');
+	background-size: 110px 90px;
+	animation-delay:0.9s;
+	-webkit-animation-delay:0.9s;
+}
+
 
 .main-menu{
 	display: inline-block;
 	width: 500px;
 	height: 100px;
-	position: absolute;
-	right: 0;
-	text-align: right;
-	top: 0;
+	float: right;
+	
 
 }
 
@@ -79,8 +93,40 @@ header{
 	font-size: 1.4em;
 	color: black;
 	position: relative;
-	top: 30px;
+	display: block;
+	text-align: right;
+	display: inline-block;
+	top: 25px;
 }
+
+.main-menu a:nth-child(1){
+	-webkit-animation-delay:1.1s;
+	
+}
+
+
+.main-menu a:nth-child(2){
+	-webkit-animation-delay:1.4s;
+	
+}
+
+
+.main-menu a:nth-child(3){
+	-webkit-animation-delay:1.7s;
+	
+}
+
+
+.main-menu a:nth-child(4){
+	-webkit-animation-delay:2.0s;
+
+}
+
+
+
+
+
+
 
 .title-up{
 	width: 96%;
@@ -100,15 +146,32 @@ header{
 }
 
 
+.title-up h1{
+	-webkit-animation-delay:2.3s;
+}
+
+
+.title-up h2{
+	-webkit-animation-delay:2.8s;
+}
+
+
 .side-link{
 	width: 250px;
 	height: auto;
 	position: absolute;
-	color: white;
 	z-index: 999999;
 	top: 45%;
 
 }
+
+.side-link span{
+	color: black;
+	font-weight: bold;
+	display: none;
+
+}
+
 
 .down article{
 	width: 85%;
@@ -214,6 +277,17 @@ footer a{
 }
 
 
+
+@-webkit-keyframes strech {
+    from {width: 0;}
+    to {widows: 96%; border-bottom: #999 solid 1px;}
+} 
+
+
+@keyframes strech {
+    from {width: 0;}
+    to {widows: 96%; border-bottom: #999 solid 1px;}
+}
 
 
 

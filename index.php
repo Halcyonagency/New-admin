@@ -11,13 +11,12 @@
   		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 
-		<!--<link rel="stylesheet" type="text/css" href="css/normalize.css"/>
-		<link rel="stylesheet" type="text/css" href="css/tooltip.css" />
-		<link rel="stylesheet" type="text/css" href="css/layout.min.css" media="all" />
-		<script type="text/javascript" src="js/plugin-slider.js"></script>
+		<!--<script type="text/javascript" src="js/plugin-slider.js"></script>
 		<script type="text/javascript" src="js/plugin-slider-2.js"></script>-->
 		<link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+		<link rel="stylesheet" type="text/css" href="css/tooltip.css" />
 		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
 		<link rel="stylesheet" href="css/animate.css">
 		<link rel="stylesheet" type="text/css" href="css/style.css"/>
 	</head>
@@ -61,13 +60,13 @@
 			<section class="main-content-up">
 				<header class="header">
 					<div class="top-logo"><!--logo-->
-						<a href="index.html"></a>
+						<a class="animated fadeIn" href="index.php"></a>
 					</div><!--end logo -->
 					<nav class="main-menu cl-effect-18" id="">
-						<a class="" id="" href="#">Nosotros</a>
-						<a class="" href="#">Portfolio</a>
-						<a class="" href="#">Blog</a>
-						<a class="" href="#">Contacto</a>
+						<a class="animated fadeInLeft" id="" href="#">Nosotros</a>
+						<a class="animated fadeInLeft" href="#">Portfolio</a>
+						<a class="animated fadeInLeft" href="#">Blog</a>
+						<a class="animated fadeInLeft" href="#">Contacto</a>
 					</nav>
 					
 				</header>
@@ -77,8 +76,8 @@
 						<div class="side-link"><!--boton de comentario-->
 							<a class="" href="#"><span class="">Dejanos un comentario!</span></a>
 						</div><!--end boton de comentario-->
-						<h1 id="h1-title" class="">Halcyon Agency</h1>
-						<h2 id="h2-title" class="">Thinking our own ways</h2>
+						<h1 id="h1-title" class="animated fadeInDown">Halcyon Agency</h1>
+						<h2 id="h2-title" class="animated fadeInDown">Thinking our own ways</h2>
 					</div>
 				</article>
 			</section>
@@ -112,6 +111,8 @@
 			</section>
 		</div><!-- /container -->
 		<script type="text/javascript">
+		$(document).ready(function(){
+
 
 					$('.side-link').find('span').mouseenter(function(){
     			$(this).addClass("animated");
@@ -120,6 +121,17 @@
     			$(this).removeClass("animated");
 						$(this).removeClass("bounceInLeft");
 					});
+
+
+					 $('.main-menu').find('a').click(function(){
+
+ 						$('#title').fadeOut();
+
+					 });
+
+					 $('.side-link').find('span').delay(3100).fadeIn();
+
+});
 
 		</script>
 	</body>
