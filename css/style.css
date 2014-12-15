@@ -29,6 +29,7 @@ a {
 .main-content-up, .main-content-down{
 	width: 100%;
 	height: 100%;
+	position: relative;
 	
 }
 
@@ -97,6 +98,7 @@ header{
 	text-align: right;
 	display: inline-block;
 	top: 25px;
+	transition: all 0.3s ease;
 }
 
 .main-menu a:nth-child(1){
@@ -204,6 +206,52 @@ footer a{
 }
 
 
+
+
+.main-content-php{
+	width: 96%;
+	position: absolute;
+	left: 2%;
+	top: 120px;
+	color: rgba(0,0,0,0.8);
+
+	
+}
+
+.main-content-php h1{
+	font-size: 2.3em;
+	color: rgba(0,0,0,0.7);
+	font-weight: bold;
+	-webkit-transition-delay:5s;
+	position: absolute;
+	left: -2px;
+	top: -23px;
+}
+
+
+.main-content-php h2{
+	font-size: 4.3em;
+	color: rgba(0,0,0,0.2);
+	margin-top: 10px;
+	position: absolute;
+	top: -40px;
+	left: -5px;
+	-webkit-transition-delay:5.2s;
+
+}
+
+.main-data{
+	width: 50%;
+	height: 100%;
+	
+	position: absolute;
+	left: 2%;
+	top: 185px;
+	-webkit-transition-delay:5.2s;
+
+
+
+}
 
 .cl-effect-18 a {
 

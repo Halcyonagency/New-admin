@@ -10,7 +10,7 @@ $textos = array('Nosotros' => "Breve reseña historica...","Portfolio"=>"Último
 	
 
 	
-	echo json_encode($textos[$selection]);
+	echo json_encode($textos);
 	
 }
 

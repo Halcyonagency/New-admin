@@ -63,10 +63,10 @@
 						<a class="animated fadeIn" href="index.php"></a>
 					</div><!--end logo -->
 					<nav class="main-menu cl-effect-18" id="">
-						<a class="animated fadeInLeft" id="" href="#">Nosotros</a>
-						<a class="animated fadeInLeft" href="#">Portfolio</a>
-						<a class="animated fadeInLeft" href="#">Blog</a>
-						<a class="animated fadeInLeft" href="#">Contacto</a>
+						<a class="click-a animated fadeInLeft" id="Nosotros" href="#">Nosotros</a>
+						<a class="click-a animated fadeInLeft" id="Portfolio" href="#">Portfolio</a>
+						<a class="click-a animated fadeInLeft" id="Blog" href="#">Blog</a>
+						<a class="click-a animated fadeInLeft" id="Contacto" href="#">Contacto</a>
 					</nav>
 					
 				</header>
@@ -112,27 +112,73 @@
 		</div><!-- /container -->
 		<script type="text/javascript">
 		$(document).ready(function(){
-
-
-					$('.side-link').find('span').mouseenter(function(){
+			$('.side-link').find('span').mouseenter(function(){
     			$(this).addClass("animated");
-						$(this).addClass("bounceInLeft");
-					}).mouseleave(function(){
+				$(this).addClass("bounceInLeft");
+			}).mouseleave(function(){
     			$(this).removeClass("animated");
-						$(this).removeClass("bounceInLeft");
-					});
+				$(this).removeClass("bounceInLeft");
+			});
+
+			$('.main-menu').find('a').click(function(){
+				$('#title').fadeOut();
+			});
+			
+			$('.side-link').find('span').delay(3100).fadeIn();
+
+			$('.main-menu').find('a').click(function(){
+				$(this).addClass("fadeOutRight");
+				/*$('.main-content').fadeOut(500);*/
+				$('.main-content-php').addClass("fadeOut");
+				$('.main-data').addClass("animated fadeOut");
+
+				var option= $(this).text();
+				$('.click-a').not(document.getElementById(option)).delay(500).removeClass("fadeOutRight");
+				$('.click-a').not(document.getElementById(option)).delay(500).addClass("fadeInLeft");
+				$.ajax({
+            		method:'POST', 
+		            url:'data/main-data/main-data.php',
+		            data:{selection: option},
+		            dataType: 'json',
+		            success:function(result){
+	    	        	
+    	    	    	var array= result;
+              		    /*$('.main-content-up').append("<div class='ajax-content-container'>"+
+                    	"<h1 class='animated fadeInLeft'>"+option+"</h1>"+"<h2 class='animated fadeInLeft'>"+result[option]+"</h2>"
+                    	+"</div>");
+						$('.main-content-up').append("<div class='main-content animated fadeInLeft '>"+"<h1>"+option+"</h1>"+"</div>");
+						$('.main-content-up').find(".main-content").append("<h2 class='animated fadeInLeft big-title'>"+result[option]+"</h2>");*/
 
 
-					 $('.main-menu').find('a').click(function(){
+						$('.main-content-up').delay(700).queue(function (next) {
+						    $(this).append("<div class='main-content-php animated fadeInLeft '>"+"<h1>"+option+"</h1>"+"</div>");
+						    next();
+						});
 
- 						$('#title').fadeOut();
+						$('.main-content-up').delay(300).queue(function (next) {
+						    $(this).find(".main-content-php").append("<h2 class='animated fadeInLeft big-title'>"+result[option]+"</h2>");
+						    next();
+						});
+                    }
+        		});
 
-					 });
+        		$.ajax({
+            		method:'POST', 
+		            url:'data/main-data/main-data-'+option+'.php',
+		            data:{selection: option},
+		            dataType: 'json',
+		            success:function(result){
+	    	        	
+    	    	    	var array= result;
+              		    /*$('.ajax-content-container').append("<div class='main-data'>"+array+"</div>");*/
+              		    /*$('.main-content').delay(1000).append(result);*/
 
-					 $('.side-link').find('span').delay(3100).fadeIn();
-
-});
-
+              		    $('.main-content-up').append("<div class='main-data animated fadeInLeft'>"+array+"</div>");
+			
+                    }
+        		});
+			});
+		});
 		</script>
 	</body>
 </html>
